@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "cross-env oleg=salo ira=varenyky vera=fish node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app.js"
+    "start": "cross-env node backend/server.js",
+    "server": "cross-env NODE_ENV=development nodemon backend/server.js",
+    "client": "npm start --prefix frontend"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,11 @@
   },
   "homepage": "https://github.com/OlegTch/node-group-2#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10",
     "nodemon": "^2.0.15"
   }
 }
